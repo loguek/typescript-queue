@@ -12,6 +12,12 @@ describe('PriorityQueue', () => {
         expect(queue.isEmpty()).toBe(false);
     });
 
+    test('Check dequeue on an empty queue', () => {
+        const queue = new PriorityQueue<string>();
+
+        expect(queue.dequeue()).toBeNull();
+    });
+
     test('Check is size for an empty queue', () => {
         const queue = new PriorityQueue<string>();
         expect(queue.size()).toBe(0);
